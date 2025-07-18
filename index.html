@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Instructor Dashboard</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Links for Google Fonts (Inter and Fira Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-robot"></i></div>
+            <span class="logo-text">Code Mentor</span>
+        </div>
+        <nav class="sidebar-menu">
+            <a class="menu-item active"><i class="fa-solid fa-brain"></i><span>Instructor</span></a>
+            <a class="menu-item"><i class="fa-solid fa-history"></i><span>History</span></a>
+            <a class="menu-item"><i class="fa-solid fa-book-open"></i><span>Tutorials</span></a>
+            <a class="menu-item"><i class="fa-solid fa-cog"></i><span>Settings</span></a>
+        </nav>
+    </aside>
+    
+    <main class="main-content">
+        <header class="header">
+            <h1>AI Coding Instructor</h1>
+            <button id="themeToggleBtn" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </header>
+        
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-chart-simple"></i> Dashboard Overview</div>
+                <div class="card-body">
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <h3><i class="fa-solid fa-star" style="color: #f59e0b;"></i> Popular Topics</h3>
+                            <ul>
+                                <li><i class="fa-solid fa-chevron-right"></i> JavaScript Closures</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Python Decorators</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Recursion Patterns</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Async/Await</li>
+                            </ul>
+                        </div>
+                        <div class="overview-item">
+                            <h3><i class="fa-solid fa-code" style="color: var(--secondary);"></i> My Stats</h3>
+                             <ul>
+                                <li><i class="fa-solid fa-chevron-right"></i> Questions Solved: 1,248</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Languages Covered: 24</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Average Score: 92%</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Streak: 12 days</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-terminal"></i> Ask a Coding Question</div>
+                <div class="card-body">
+                    <textarea id="questionInput" placeholder="e.g., Explain closures in JavaScript, How to implement binary search in Python..."></textarea>
+                    <button id="askButton">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Ask Instructor</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-graduation-cap"></i> Instructor's Response</div>
+                <div class="card-body output-container">
+                    <div class="loading-indicator" id="loadingIndicator">
+                        <div class="spinner"></div>
+                        <p>Instructor is thinking...</p>
+                    </div>
+                    <div id="outputArea">
+                        <p>Welcome! I am your AI Coding Instructor. I'm ready to help you with any programming concepts, algorithms, or code.</p>
+                        <p>Try asking me something like: <code>"Explain how promises work in JavaScript"</code>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
